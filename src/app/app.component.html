@@ -1,0 +1,17 @@
+<button (click)="toggleselection()" class="btn">Toggle Selection Mode</button>
+<span class="bb" (click)="toggleselection()"><img src="./assets/images/icon.png"/></span>
+<ag-grid-angular style="width: 1100px; height: 500px;" class="ag-theme-balham" 
+      [modules]="modules" 
+      [rowHeight]="rowHeight"
+      [rowSelection]="rowSelection" 
+      [allowContextMenuWithControlKey]="true" 
+      [getContextMenuItems]="getContextMenuItems" 
+      [frameworkComponents]="frameworkComponents"
+      [enableRangeSelection]="true" 
+      [statusBar]="statusBar" 
+      (columnResized)="onColumnResized($event)" 
+      (gridReady)="onGridReady($event)"
+      [columnDefs]="columnDefs">
+</ag-grid-angular>
+
+<!--[suppressRowClickSelection]="true"-->
